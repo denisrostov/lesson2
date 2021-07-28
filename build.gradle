@@ -8,18 +8,18 @@ repositories {
 }
 
 def allureVersion = "2.13.9",
-    selenideVersion = "5.22.0",
+    selenideVersion = "5.23.0",
     junitVersion = "5.7.2"
 
-allure {
-    version = allureVersion
-    autoconfigure = true
-    aspectjweaver = true
-    configuration = "testImplementation"
-    useJUnit5 {
-        version = allureVersion
-    }
-}
+//allure {
+//    version = allureVersion
+//    autoconfigure = true
+//    aspectjweaver = true
+//    configuration = "testImplementation"
+//    useJUnit5 {
+//        version = allureVersion
+//    }
+//}
 
 dependencies {
     testImplementation(
@@ -50,8 +50,8 @@ tasks.withType(Test) {
     }
 }
 
-task smoke(type: Test) {
-    useJUnitPlatform {
-        includeTags 'smoke'
-    }
-}
+//task smoke(type: Test) {
+//    useJUnitPlatform {
+//        includeTags 'smoke'
+//    }
+//}
